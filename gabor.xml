@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering</category>
+  <title>Skew</title>
+  <description>
+   This module computes the skewness of an image locally
+  </description>
+  <version>1</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Francois Budin</contributor>
+<acknowledgements>
+</acknowledgements>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input Image</description>
+    </image>
+    <image>
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Output Image</description>
+    </image>
+    <image>
+      <name>outputFilter</name>
+      <label>Output Filter</label>
+      <channel>output</channel>
+      <longflag>filter</longflag>
+      <description>Output Filter</description>
+    </image>
+    <file>
+      <name>listFiles</name>
+      <label>List Output Files</label>
+      <channel>output</channel>
+      <flag>o</flag>
+      <longflag>listFiles</longflag>
+      <description>Output Image</description>
+    </file>
+  <double-vector>
+    <name>frequencies</name>
+    <label>Frequencies</label>
+    <description>Frequency at which the filters are computed</description>
+    <flag>f</flag>
+    <longflag>frequencies</longflag>
+    <default>1</default>
+  </double-vector>
+  <double-vector>
+    <name>sigma</name>
+    <label>Sigma</label>
+    <description>sigma</description>
+    <flag>s</flag>
+    <longflag>sigma</longflag>
+    <default>1</default>
+  </double-vector>
+  <integer>
+    <name>rotations</name>
+    <label>Number of rotations</label>
+    <description>Number of rotations</description>
+    <flag>r</flag>
+    <longflag>rotations</longflag>
+    <default>1</default>
+    <minimum>1</minimum>
+  </integer>
+  <boolean>
+    <name>imaginary</name>
+    <label>Compute Imaginary Part</label>
+    <description>Compute imaginary part</description>
+    <flag>i</flag>
+    <longflag>imaginary</longflag>
+    <default>false</default>
+  </boolean>
+  <integer-vector>
+      <name>filterSize</name>
+      <label>Filter size</label>
+      <description>Gabor filter size</description>
+      <flag>d</flag>
+      <longflag>size</longflag>
+      <default>50,50,50</default>
+  </integer-vector>
+  </parameters>
+</executable>
+
+

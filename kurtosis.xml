@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<executable>
+  <category>Filtering</category>
+  <title>Kurtosis</title>
+  <description>
+   This module computes the kurtosis of an image locally
+  </description>
+  <version>1</version>
+  <documentation-url></documentation-url>
+  <license></license>
+  <contributor>Francois Budin</contributor>
+<acknowledgements>
+</acknowledgements>
+  <parameters>
+    <label>Input/Output</label>
+    <description>Input/output parameters</description>
+    <image>
+      <name>inputVolume</name>
+      <label>Input Volume</label>
+      <channel>input</channel>
+      <index>0</index>
+      <description>Input Image</description>
+    </image>
+    <image>
+      <name>outputVolume</name>
+      <label>Output Volume</label>
+      <channel>output</channel>
+      <index>1</index>
+      <description>Output Image</description>
+    </image>
+    <integer>
+      <name>radius</name>
+      <label>Radius</label>
+      <description>Kernel radius</description>
+      <flag>r</flag>
+      <longflag>radius</longflag>
+      <default>1</default>
+    </integer>
+    <boolean>
+      <name>bias</name>
+      <label>Bias</label>
+      <description>bias correction of the skewness</description>
+      <flag>b</flag>
+      <longflag>bias</longflag>
+      <default>false</default>
+    </boolean>
+    <boolean>
+      <name>excess</name>
+      <label>Excess</label>
+      <description>Computes kurtosis excess (-3)</description>
+      <flag>e</flag>
+      <longflag>excess</longflag>
+      <default>false</default>
+    </boolean>
+  </parameters>
+</executable>
+
+
